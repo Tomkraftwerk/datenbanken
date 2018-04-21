@@ -1,0 +1,50 @@
+html {
+}
+
+.content {
+}
+
+h1 {
+}
+
+table, td {
+}
+
+thead td {
+}
+
+.entries {
+}
+
+.details {
+}
+
+/* HEADER-NAVIGATION */
+nav {
+    margin: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+nav a {
+    background-color:lightgray;
+    border: solid 1px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 0.2em;
+    flex-basis: 10%;
+    flex-grow: 1;
+    min-width: 100px;
+}
+nav a:hover, tr:hover {
+    background-color: #D8B17F;
+}
+#loginBox {
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    background-color: white;
+}
+/* ENDE HEADER-NAVIGATION */

@@ -1,0 +1,28 @@
+Datenbank Wunschstern
+
+Persons:
+    *Person_Id*
+    Vorname
+    Nachname
+    Alter
+    Email
+    Geschlecht
+    
+    Straße
+    Hausnummer
+    Stadt
+    
+    Standort
+    
+Wunsch:
+    (*Wunsch_Id*)
+    Person_Id
+    Erfuellt -> Ja, Nein
+    
+    Kategorie -> Zeit, Geschenk, Gutschein...
+    Wunsch_Text
+    
+    Wunsch erfüllen -> Email an Verwaltungsadresse (erfuellen@wunschstern.de) mit Wunsch-Id im Betreff
+    
+wunschstern-admin
+wunschstern
