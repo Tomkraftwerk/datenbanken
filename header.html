@@ -17,12 +17,25 @@
         <div class="nav_wrapper">
          class=grey
         -->
-            <nav>
+        <nav>
             <!--    <span id="button" style="font-size: 2em; width: 100%;">🞪</span>-->
-                <a href="index.php">Home</a>
-                <a href="eingabe.php">Daten eingeben</a>
-                <a href="abruf.php">Daten abrufen</a>
-            </nav>
+            <a href="index.php">Home</a>
+            <a href="eingabe.php">Eingabe</a>
+            <a href="abruf.php">Abruf</a>
+            <a id="loginButton">Intern</a>
+        </nav>
+
+        <div id="loginBox" style="display: none;">
+            <form action="php/password_check.php" method="post">
+
+                <p>Benutzername:</p>
+                <input type="text" name="name" placeholder="Name" required>
+
+                <p>Passwort:</p>
+                <input type="password" name="password" placeholder="Passwort" required>
+                <p><input type="submit"></p>
+            </form>
+        </div>
         <!--
             </div>
         -->

@@ -51,10 +51,12 @@ if (isset($_POST["intern"])){
             # Sortierung
             $sort_key = array(
                 "Wunsch_Id" => " ORDER BY Wunsch_Id;",
+                "Person_Id" => " ORDER BY Person_Id;",
                 "FirstName" => " ORDER BY FirstName;",
                 "LastName" => " ORDER BY LastName;",
                 "City" => " ORDER BY City;",
-                "Category" => " ORDER BY Category;"
+                "Category" => " ORDER BY Category;",
+                "Status" => " ORDER BY Status;"
             );
             if (isset($_POST["intern"])) {
                 $orderby = $sort_key[$_POST["intern"]];
@@ -73,16 +75,19 @@ if (isset($_POST["intern"])){
                 // output data of each row
                 echo
                     "
+                    <p>Einträge sortiert nach <b>".$_POST["intern"]."</b></p>
                     <table>
                     <thead>
                     <tr>
                     <td>Wunsch_Id</td>
+                    <td>Person_Id</td>
                     <td>FirstName</td>
                     <td>LastName</td>
                     <td>Email</td>
                     <td>City</td>
                     <td>Wunsch-Kategorie</td>
-                    <td>Weitere Informationen</td>
+                    <td>Status</td>
+                    <td>Als erfüllt markieren</td>
                     </tr>
                     </thead>
                     <tbody>
@@ -90,11 +95,13 @@ if (isset($_POST["intern"])){
                 while($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo ("<td>".$row["Wunsch_Id"]."</td>");
+                    echo ("<td>".$row["Person_Id"]."</td>");
                     echo ("<td>".$row["FirstName"]."</td>");
                     echo ("<td>".$row["LastName"]."</td>");
                     echo ("<td>".$row["Email"]."</td>");
                     echo ("<td>".$row["City"]."</td>");
                     echo ("<td>".$row["Category"]."</td>");
+                    echo ("<td>".$row["Status"]."</td>");
                     echo ('<td>
                             <form method="post" action="details.php">
                                 <button type="submit" name="intern" value="'.$row["Wunsch_Id"].'">Details</button>

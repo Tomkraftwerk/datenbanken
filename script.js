@@ -15,4 +15,9 @@
                 };
                 $("nav").toggleClass("grey");
             });
+            
+            /* Login */
+            $("#loginButton").click(function() {
+               $("#loginBox").toggle("slow");
+            });
         });

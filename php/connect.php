@@ -3,7 +3,7 @@
 $host = "localhost:3306";
 $username = "wunschstern-admin";
 $password = "wunschstern";
-$db = "ABSCHLUSSPROJEKT";
+$db = "Wunschstern";
 $con = mysqli_connect($host, $username, $password, $db);
 // Check connection
 if (mysqli_connect_errno())
