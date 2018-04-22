@@ -21,7 +21,7 @@ if (isset($_GET["id"])){
                 echo ("Standort: ".$row["City"]."<br/>");
                 echo ("Wunsch-Kategorie: ".$row["Category"]."<br/>");
                 echo ("Wunsch: ".$row["Wunsch_Text"]."<br/>");
-                echo ('Wunsch erfüllen: <a href="mailto:erfuellen@wunschstern.de?subject=Wunsch%20Nr.'.$row["Wunsch_Id"].'%20erf%C3%BCllen">📧</a></p></div>');
+                echo ('Wunsch erfüllen: <a href="mailto:erfuellen@wunschstern.de?subject=Wunsch%20Nr.'.$row["Wunsch_Id"].'%20erf%C3%BCllen">📧</a></p><a href="abruf.php">Zurück zur Übersicht</a></div>');
             }
             else {
                 echo "Kein Eintrag vorhanden!";
@@ -47,9 +47,10 @@ if (isset($_POST["intern"])){
                 echo ("Wunsch-Kategorie: ".$row["Category"]."<br/>");
                 echo ("Wunsch: ".$row["Wunsch_Text"]."<br/>");
                 echo ("Status: ".$row["Status"]."<br/>");
-                echo ('<form method="post" action="php/erfuellt.php">
+                echo ('<form method="post" action="php/modify.php">
                                 <button type="submit" name="erfuellt" value="'.$_POST["intern"].'">Wunsch-Status ändern</button>
-                            </form></p></div>');
+                                <button type="submit" name="loeschen" value="'.$_POST["intern"].'">Wunsch löschen</button>
+                            </form></p><a href="intern.php">Zurück zur Übersicht</a></div>');
             }
             else {
                 echo "Kein Eintrag vorhanden!";

@@ -17,11 +17,13 @@ include ("connect.php");
 
 # Datenbank zurücksetzen
 $query = ('DELETE FROM Persons;');
+mysqli_query($con, $query);
 $query = ('DELETE FROM Wuensche;');
 mysqli_query($con, $query);
 
 $person_entries = "";
-
+$wunsch_entries = "";
+    
 #Einträge generieren und in Datenbank schreiben
 for ($i = 0; $i <= $n; $i++) {
   $firstname=$sample[0][array_rand($sample[0],1)];
@@ -31,8 +33,9 @@ for ($i = 0; $i <= $n; $i++) {
   $country=$sample[4][array_rand($sample[4],1)];
     $gender=$sample[5][array_rand($sample[5],1)];
   $email=(strtolower($firstname).".".strtolower($lastname)."@".$domain.".".$country);
+    $age=rand(18,99);
 
-  $person_entries .= ('("'.$i.'","'.$firstname.'","'.$lastname.'","'.$email.'","'.$city.'")');
+  $person_entries .= ('("'.$i.'","'.$firstname.'","'.$lastname.'","'.$email.'","'.$city.'","'.$gender.'","'.$age.'")');
   if ($i < $n) {
     $person_entries .= ',';
   }
@@ -48,10 +51,9 @@ for ($i = 0; $i <= $n; $i++) {
     
 }
 
-$query = ('INSERT INTO Persons (Person_Id, FirstName, LastName, Email, City, Gender) VALUES '.$person_entries.';');
+$query = ('INSERT INTO Persons (Person_Id, FirstName, LastName, Email, City, Gender, Age) VALUES '.$person_entries.';');
+mysqli_query($con, $query);
 $query = ('INSERT INTO Wuensche (Wunsch_Id, Person_Id, Category, Wunsch_Text, Status) VALUES '.$wunsch_entries.';');
-
-# Query ausführen
 mysqli_query($con, $query);
 
 # Verbindung mit Datenbank trennen
