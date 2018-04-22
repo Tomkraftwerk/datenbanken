@@ -2,21 +2,48 @@ html {
 }
 
 .content {
+    /*
+    Wrapper für den Inhalt der Seite
+    */
+    /*
+    max-width: 700px;
+    */
 }
 
 h1 {
 }
 
-table, td {
+table {
+}
+
+tr {
+}
+
+td {
 }
 
 thead td {
+    /*
+    Einzelne Zellen im Tabellenkopf
+    */
+}
+
+tr:hover {
+    /*
+    Tabellenzeilen, die per Maus überflogen werden
+    */
 }
 
 .entries {
+    /*
+    Einträge, die auf den Seiten abruf.php und intern.php als Tabelle angezeigt werden
+    */
 }
 
 .details {
+    /*
+    Einträge, die auf der Seite details.php angezeigt werden
+    */
 }
 
 /* HEADER-NAVIGATION */
@@ -34,11 +61,11 @@ nav a {
     text-decoration: none;
     color: black;
     margin: 0.2em;
-    flex-basis: 10%;
+    /*flex-basis: 25%;*/
     flex-grow: 1;
-    min-width: 100px;
+    min-width: 150px;
 }
-nav a:hover, tr:hover {
+nav a:hover {
     background-color: #D8B17F;
 }
 #loginBox {
