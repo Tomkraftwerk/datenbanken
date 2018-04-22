@@ -1,7 +1,7 @@
 # datenbanken
 Projekt zu Datenbanken
 
-### evtl veraltete Angaben ###
+### evtl veraltete Angaben in dieser ReadMe ###
 
 Datenbank: 
 Name: Wunschstern
