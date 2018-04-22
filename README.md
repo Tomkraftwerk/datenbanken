@@ -1,8 +1,10 @@
 # datenbanken
 Projekt zu Datenbanken
 
+### evtl veraltete Angaben ###
+
 Datenbank: 
-Name: Abschlussprojekt
+Name: Wunschstern
 Username: wunschstern-admin
 pw: wunschstern
 
